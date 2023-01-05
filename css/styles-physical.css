@@ -5,6 +5,10 @@
   --gray30:#212121;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
@@ -18,6 +22,11 @@ a {
 header {
   font-size: 14px;
   color: var(--gray10);
+  width: 188px;
+  position: absolute;
+  top: 64px;
+  left: -232px;
+  z-index: 1;
 }
 
 header a {
@@ -28,15 +37,20 @@ header a {
 header a:hover{
   color: var(--gray30);
 }
+header li {
+  margin-bottom: 16px
+}
 
 nav details summary {
   font-weight: bold;
+  line-height: 24px;
 }
 
 h1 {
   size: 60px;
   margin-top: 64px;
   margin-bottom: 16px;
+  font-weight: normal;
 }
 
 h1 + p {
@@ -58,10 +72,42 @@ h3 {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 pre {
   background-color:darkgray;
+  padding: 40px;
+  font-family: 'Roboto';
+  font-weight: normal;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  position: relative;
+}
+
+.main {
+ /* background-color: burlywood; */
+}
+
+.wrapper {
+  width: 902px;
+  margin: auto;
+}
+
+.main-content {
+ background-color: white;
+}
+
+.debug {
+  outline: 1px solid red;
 }
 
 .hero {
@@ -95,16 +141,20 @@ pre {
 
 .section-content h3 {
   counter-increment: titleList;
+  padding-bottom: 8px;
 }
 
 .section-content h3::before {
-  content: counter(titleList, decimal);
+  content: counter(titleList, decimal) '. ';
 }
 
 .section-content h3::after {
   content: '';
   display: inline-block;
-  width: 32px;
+  width: 80px;
   height: 4px;
   background-color: var(--gray30);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
