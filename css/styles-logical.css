@@ -82,6 +82,7 @@ p {
 .section-content img {
   display: block;
   margin-block-start: 40px;
+  max-inline-size: 100%;
 }
 
 .section-content {
@@ -102,4 +103,16 @@ p {
   width: 32px;
   height: 4px;
   background-color: var(--white30);
+}
+
+.main {
+
+}
+
+.wrapper {
+  max-inline-size: 902px;
+  margin: auto;
+}
+
+.main-content {
 }
