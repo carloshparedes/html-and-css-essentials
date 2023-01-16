@@ -15,10 +15,23 @@ body {
 a {
   color: var(--white30);
 }
+.header {
+  position: sticky;
+  inset-block-start: -45px;
+}
+
+.header-content {
+  position: relative;
+  inset-block-start: 65px;
+}
 
 header {
   font-size: 14px;
   color: var(--white30);
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: -208px;
+  inline-size: 188px;
 }
 
 header a {
@@ -28,6 +41,7 @@ header a {
 
 header li {
   color: var(--white20);
+  margin-block-end: 16px;
 }
 
 header a:hover{
@@ -67,6 +81,12 @@ hr {
 
 pre {
   background-color: var(--white10);
+  padding: 40px;
+  overflow: auto;
+  border-radius: 8px;
+  border: 10px solid #5551ff;
+  box-shadow: -10PX 10px 0 0 #ABAAF6;
+  margin-block-end: 40px;
 }
 
 p {
@@ -97,17 +117,17 @@ p {
   content: counter(titleList, decimal)'. ';
 }
 
-.section-content h3::after {
+/* .section-content h3::after {
   content: '';
   display: inline-block;
   width: 32px;
   height: 4px;
   background-color: var(--white30);
-}
+} */
 
-.main {
+/* .main {
 
-}
+} */
 
 .wrapper {
   max-inline-size: 902px;
@@ -115,4 +135,5 @@ p {
 }
 
 .main-content {
+  padding-inline: 16px;
 }
